@@ -1,0 +1,17 @@
+c:\users\admin\documents\visual studio 2015\Projects\DangNhapDemo\DangNhapDemo\bin\Debug\DangNhapDemo.exe.config
+c:\users\admin\documents\visual studio 2015\Projects\DangNhapDemo\DangNhapDemo\bin\Debug\DangNhapDemo.exe
+c:\users\admin\documents\visual studio 2015\Projects\DangNhapDemo\DangNhapDemo\bin\Debug\DangNhapDemo.pdb
+c:\users\admin\documents\visual studio 2015\Projects\DangNhapDemo\DangNhapDemo\bin\Debug\Core.dll
+c:\users\admin\documents\visual studio 2015\Projects\DangNhapDemo\DangNhapDemo\bin\Debug\EntityFramework.dll
+c:\users\admin\documents\visual studio 2015\Projects\DangNhapDemo\DangNhapDemo\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\admin\documents\visual studio 2015\Projects\DangNhapDemo\DangNhapDemo\bin\Debug\Core.pdb
+c:\users\admin\documents\visual studio 2015\Projects\DangNhapDemo\DangNhapDemo\bin\Debug\EntityFramework.xml
+c:\users\admin\documents\visual studio 2015\Projects\DangNhapDemo\DangNhapDemo\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\admin\documents\visual studio 2015\Projects\DangNhapDemo\DangNhapDemo\obj\Debug\WinForm.csprojResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2015\Projects\DangNhapDemo\DangNhapDemo\obj\Debug\DangNhapDemo.DangKy.resources
+c:\users\admin\documents\visual studio 2015\Projects\DangNhapDemo\DangNhapDemo\obj\Debug\DangNhapDemo.DangNhap.resources
+c:\users\admin\documents\visual studio 2015\Projects\DangNhapDemo\DangNhapDemo\obj\Debug\DangNhapDemo.Properties.Resources.resources
+c:\users\admin\documents\visual studio 2015\Projects\DangNhapDemo\DangNhapDemo\obj\Debug\DangNhapDemo.QuanLyNguoiDung.resources
+c:\users\admin\documents\visual studio 2015\Projects\DangNhapDemo\DangNhapDemo\obj\Debug\WinForm.csproj.GenerateResource.Cache
+c:\users\admin\documents\visual studio 2015\Projects\DangNhapDemo\DangNhapDemo\obj\Debug\DangNhapDemo.exe
+c:\users\admin\documents\visual studio 2015\Projects\DangNhapDemo\DangNhapDemo\obj\Debug\DangNhapDemo.pdb

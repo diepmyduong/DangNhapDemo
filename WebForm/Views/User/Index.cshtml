@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Core.Biz.User>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            User Name
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            Create At
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateAt)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { username = item.Username }) |
+            @Html.ActionLink("Details", "Details", new { username = item.Username }) |
+            @Html.ActionLink("Delete", "Delete", new { username = item.Username })
+        </td>
+    </tr>
+}
+
+</table>
