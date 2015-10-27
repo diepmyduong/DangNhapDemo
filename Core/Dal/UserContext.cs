@@ -61,43 +61,69 @@ namespace Core.Dal
 
         public static int update(User user)
         {
-            Database db = new Database();
-            string queryString = "UPDATE [dbo].[Users] SET [password] = @password WHERE [username] = @username";
-            List<SqlParameter> atrs = new List<SqlParameter>()
+            try
             {
-                new SqlParameter() {ParameterName = "@username",SqlDbType= SqlDbType.NVarChar,Value = user.Username },
-                new SqlParameter() {ParameterName = "@password",SqlDbType= SqlDbType.NVarChar,Value = user.Password }
-            };
-            int result = db.execute(queryString, atrs);
-            db.Disconnect();
-            return result;
+                Database db = new Database();
+                string queryString = "UPDATE [dbo].[Users] SET [password] = @password WHERE [username] = @username";
+                List<SqlParameter> atrs = new List<SqlParameter>()
+                {
+                    new SqlParameter() {ParameterName = "@username",SqlDbType= SqlDbType.NVarChar,Value = user.Username },
+                    new SqlParameter() {ParameterName = "@password",SqlDbType= SqlDbType.NVarChar,Value = user.Password }
+                };
+                int result = db.execute(queryString, atrs);
+                db.Disconnect();
+                return result;
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return 0;
+            }
+           
         }
 
         public static int save(User user)
         {
-            Database db = new Database();
-            string queryString = "INSERT INTO [dbo].[Users]([username],[password],[create_at]) VALUES(@username,@password,GETDATE())";
-            List<SqlParameter> atrs = new List<SqlParameter>()
+            try
             {
-                new SqlParameter() {ParameterName = "@username",SqlDbType= SqlDbType.NVarChar,Value = user.Username },
-                new SqlParameter() {ParameterName = "@password",SqlDbType= SqlDbType.NVarChar,Value = user.Password }
-            };
-            int result = db.execute(queryString, atrs);
-            db.Disconnect();
-            return result;
+                Database db = new Database();
+                string queryString = "INSERT INTO [dbo].[Users]([username],[password],[create_at]) VALUES(@username,@password,GETDATE())";
+                List<SqlParameter> atrs = new List<SqlParameter>()
+                {
+                    new SqlParameter() {ParameterName = "@username",SqlDbType= SqlDbType.NVarChar,Value = user.Username },
+                    new SqlParameter() {ParameterName = "@password",SqlDbType= SqlDbType.NVarChar,Value = user.Password }
+                };
+                int result = db.execute(queryString, atrs);
+                db.Disconnect();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return 0;
+            }
+
         }
 
         public static int delete(string username)
         {
-            Database db = new Database();
-            string queryString = "DELETE FROM [dbo].[Users] WHERE [username] = @username";
-            List<SqlParameter> atrs = new List<SqlParameter>()
+            try
             {
-                new SqlParameter() {ParameterName = "@username",SqlDbType= SqlDbType.NVarChar,Value = username }
-            };
-            int result = db.execute(queryString, atrs);
-            db.Disconnect();
-            return result;
+                Database db = new Database();
+                string queryString = "DELETE FROM [dbo].[Users] WHERE [username] = @username";
+                List<SqlParameter> atrs = new List<SqlParameter>()
+                {
+                    new SqlParameter() {ParameterName = "@username",SqlDbType= SqlDbType.NVarChar,Value = username }
+                };
+                int result = db.execute(queryString, atrs);
+                db.Disconnect();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return 0;
+            }
+            
         }
     }
 }

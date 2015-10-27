@@ -42,6 +42,32 @@ namespace WebForm.Controllers
             }
             return RedirectToAction("login");
         }
+
+        public ActionResult SignUp()
+        {
+            User user = new User();
+            return View(user);
+        }
+        [HttpPost]
+        public ActionResult SignUp(User model,FormCollection frmCol)
+        {
+            if(model.Password != frmCol["VerifyPassword"])
+            {
+                return View(model);
+            }
+            //Kiểm tra người dùng tồn tại
+            User user = UserContext.find(model.Username);
+            if(user != null)
+            {
+                return View(model);
+            }
+            //Người dùng chưa tồn tại
+            if(model.signUp())
+            {
+                return RedirectToAction("Login");
+            }
+            return View(model);
+        }
         public ActionResult Details(string username)
         {
             if (username == null)
